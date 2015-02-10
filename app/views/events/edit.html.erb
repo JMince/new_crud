@@ -1,0 +1,38 @@
+<%= form_for @event, url: event_path(@event), method: :patch do |f| %>
+<div>
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+</div>
+
+</br>
+
+<div>
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+</div>
+
+</br>
+
+<div>
+<%= f.label :descripton %>
+<%= f.text_field :description %>
+</div>
+
+</br>
+
+<div>
+<%= f.label :capacity %>
+<%= f.number_field :capacity %>
+</div>
+
+</br>
+
+<div>
+<%= f.label :name, 'Requires ID' %>
+<%= f.check_box :requires_id %>
+</div>
+
+</br>
+
+<%= f.submit "Submit Edits" %>
+<% end %>

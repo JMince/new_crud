@@ -1,0 +1,13 @@
+<% @events.each do |event| %>
+<div>
+<p><%= event.date %></p>
+<p><%= event.location %></p>
+<p><%= event.description %></p>
+<p><%= event.capacity %></p>
+<p><%= event.requires_id %></p>
+<p><%= link_to "Show", event_path(event[:id]) %></p>
+
+</div>
+
+
+<% end %>
